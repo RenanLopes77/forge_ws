@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "dev": "./run.sh",
+    "test": "./test.sh"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  }
+}

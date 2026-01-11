@@ -1,0 +1,11 @@
+FROM denoland/deno:latest
+
+WORKDIR /app
+
+COPY docker/websocket-server.ts .
+
+RUN deno cache websocket-server.ts
+
+ENV ROOM_ID=default
+
+CMD ["run", "--allow-net", "--allow-env", "websocket-server.ts"]
